@@ -9,11 +9,11 @@ OpenCV 2.4.13.6
 ``rotate.cpp``
 : program that loads an image and rotates it.
 
-1) ``int main``
+### 1) ``int main``
 : read an image and show it. rotate the image by invoking myrotate function and show the rotated one. 
 two window will appear when debug the program; the original one and rotated one
 
-2) ``Mat myrotate(const Mat input, float angle, const char* opt)``
+### 2) ``Mat myrotate(const Mat input, float angle, const char* opt)``
 : function that rotates the input image and returns the result
 - parameter
   
@@ -30,12 +30,12 @@ two window will appear when debug the program; the original one and rotated one
 ``stitching.cpp``
 : program that combines two images with overlapping
 
-1) ``int main``
+### 1) ``int main``
 : read an image set corresponding pixels. Estimate affine transformation by invokig cal_affine and compute boundary for merged image.
 calculate the size of a final merged image and initialize it. do inverse warping with bilinear interpolation. 
 finally, do image stitching with blend. 
 
-2) ```Mat cal_affine(int ptl_x[], int ptl_y[], int ptr_x[], int ptr_y[], int number_of_points)```
+### 2) ```Mat cal_affine(int ptl_x[], int ptl_y[], int ptr_x[], int ptr_y[], int number_of_points)```
 : function to get the affine matrix
 - parameter
   
@@ -45,7 +45,7 @@ finally, do image stitching with blend.
 
 - return affine matrix
 
-3) ``blend_stitching(const Mat I1, const Mat I2, Mat& I_f, int bound_l, int bound_u, float alpha)``
+### 3) ``blend_stitching(const Mat I1, const Mat I2, Mat& I_f, int bound_l, int bound_u, float alpha)``
 : function to do image stitching with blend. 
 - parameter
   
@@ -60,15 +60,3 @@ finally, do image stitching with blend.
 	``int bound_u``: boundary for final image which is less than 0
 
 	``float alpha``: given float (0~1)
-
----
-## Result
-### rotate.cpp
-<img width="805" height="439" alt="image" src="https://github.com/user-attachments/assets/577dedcc-10d0-40fe-a206-cc651ab705a3" />
-
-### stitching.cpp
-<img width="679" height="345" alt="image" src="https://github.com/user-attachments/assets/3d11e79a-e743-4388-b805-1911b728045c" />
-
-	
-
-
