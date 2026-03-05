@@ -8,7 +8,7 @@ OpenCV 2.4.13.6
 ## 1. MeanFilterGray.cpp
 : Uniform mean filter is the simplest method of smoothing images, reducing the amount of intensity variation between one pixel and the next. (often used to reduce noise in images)
 This program implement the mean filter to gray scale image. 
-1) ``Mat meanfilter(const Mat input, int n, const char* opt)``
+### 1) ``Mat meanfilter(const Mat input, int n, const char* opt)``
 - parameter
   
 	``const Mat input``: input image
@@ -21,7 +21,7 @@ This program implement the mean filter to gray scale image.
 ## 2. MeanFilterRGB.cpp
 : Uniform mean filter is the simplest method of smoothing images, reducing the amount of intensity variation between one pixel and the next. (often used to reduce noise in images)
 This program implements the mean filter to color image for each channel. 
-1) ``Mat meanfilter(const Mat input, int n, const char* opt)``
+### 1) ``Mat meanfilter(const Mat input, int n, const char* opt)``
 : function to implement the mean filter
 - parameter
   
@@ -35,7 +35,7 @@ This program implements the mean filter to color image for each channel.
 ## 3. gaussian_gray.cpp
 : Gaussian filter is one of the most commonly used parametric models and considers spatial distances within neghborhoods.
 This program implements the gaussian filter to gray scale image. 
-1) ``Mat gaussianfilter(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)``
+### 1) ``Mat gaussianfilter(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)``
 : function to implement the gaussian filter
 - parameter
   
@@ -54,7 +54,7 @@ This program implements the gaussian filter to gray scale image.
 : Gaussian filter is one of the most commonly used parametric models and considers spatial distances within neighborhoods.  
 This program implements the gaussian filter to color image for each channel.
 
-1) `Mat gaussianfilter(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
+### 1) `Mat gaussianfilter(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
 : function to implement the gaussian filter
 
 - parameter
@@ -75,7 +75,7 @@ This program implements the gaussian filter to color image for each channel.
 : sobel filter creates an image emphasising edges.  
 This program implements the sobel filter to gray scale image.
 
-1) `Mat sobelfilter(const Mat input)`
+### 1) `Mat sobelfilter(const Mat input)`
 : function to implement the sobel filter
 
 - parameter
@@ -88,7 +88,7 @@ This program implements the sobel filter to gray scale image.
 : sobel filter creates an image emphasising edges.  
 This program implements the sobel filter to color image for each channel.
 
-1) `Mat sobelfilter(const Mat input)`
+### 1) `Mat sobelfilter(const Mat input)`
 : function to implement the sobel filter
 
 - parameter
@@ -101,7 +101,7 @@ This program implements the sobel filter to color image for each channel.
 : laplacian filter highlights regions of rapid intensity change and is therefore often used for edge detection.  
 This program implements the laplacian filter to gray scale image.
 
-1) `Mat laplacianfilter(const Mat input)`
+### 1) `Mat laplacianfilter(const Mat input)`
 : function to implement the laplacian filter
 
 - parameter
@@ -114,7 +114,7 @@ This program implements the laplacian filter to gray scale image.
 : laplacian filter highlights regions of rapid intensity change and is therefore often used for edge detection.  
 This program implements the laplacian filter to color image for each channel.
 
-1) `Mat laplacianfilter(const Mat input)`
+### 1) `Mat laplacianfilter(const Mat input)`
 : function to implement the laplacian filter
 
 - parameter
@@ -127,7 +127,7 @@ This program implements the laplacian filter to color image for each channel.
 : Gaussian filter is one of the most commonly used parametric models and considers spatial distances within neighborhoods.  
 This program implements the separable gaussian filter to gray scale image. It is much faster than gaussian filter.
 
-1) `Mat gaussianfilter(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
+### 1) `Mat gaussianfilter(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
 : function to implement the separable gaussian filter
 
 - parameter
@@ -148,7 +148,7 @@ This program implements the separable gaussian filter to gray scale image. It is
 : Gaussian filter is one of the most commonly used parametric models and considers spatial distances within neighborhoods.  
 This program implements the separable gaussian filter to color image for each channel. It is much faster than gaussian filter.
 
-1) `Mat gaussianfilter(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
+### 1) `Mat gaussianfilter(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
 : function to implement the separable gaussian filter
 
 - parameter
@@ -169,7 +169,7 @@ This program implements the separable gaussian filter to color image for each ch
 : Unsharp masking makes an image look sharper by boosting high-frequency components.  
 This program implements the unsharp masking to gray scale image.
 
-1) `Mat unsharpMask(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
+### 1) `Mat unsharpMask(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
 : function to implement the gaussian filter
 
 - parameter
@@ -190,7 +190,7 @@ This program implements the unsharp masking to gray scale image.
 : Unsharp masking makes an image look sharper by boosting high-frequency components.  
 This program implements the unsharp masking to color image for each channel.
 
-1) `Mat unsharpMask(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
+### 1) `Mat unsharpMask(const Mat input, int n, float sigmaT, float sigmaS, const char* opt)`
 : function to implement the gaussian filter
 
 - parameter
