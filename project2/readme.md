@@ -9,28 +9,28 @@ OpenCV 2.4.13.6
 ``hist_func.h``
 : header of source codes using histogram
 
-1) ``float* cal_PDF(Mat& input)``
+### 1) ``float* cal_PDF(Mat& input)``
 : function to generate PDF for single channel image
 - parameter
   
 	``Mat& input``: matrix of input image
 - return PDF
 
-2) ``float** cal_PDF_RGB(Mat& input)``
+### 2) ``float** cal_PDF_RGB(Mat& input)``
 :  function to generate PDF for color image
 - parameter
   
 	``Mat& input``: matrix of input image
 - return PDF
 
-3) ``float* cal_CDF(Mat& input)``
+### 3) ``float* cal_CDF(Mat& input)``
 : function to generate CDF for single channel image
 - parameter
   
 	``Mat& input``: matrix of input image
 - return CDF
 
-4) ``float** cal_CDF_RGB(Mat& input)``
+### 4) ``float** cal_CDF_RGB(Mat& input)``
 : function to generate CDF for color channel image
 - parameter
   
@@ -42,7 +42,7 @@ OpenCV 2.4.13.6
 ``PDF_CDF.cpp``
 : program that generate PDF and CDF for input grayscale image
 
-1) ``int main()``
+### 1) ``int main()``
 : read the input image and convert to grayscale. invoke the cal_PDF and cal_CDF function from hist_func.h
 and get PDF and CDF for the image. Write the text file for PDF and CDF. Show the original image and grayscale image.
 	
@@ -51,12 +51,12 @@ and get PDF and CDF for the image. Write the text file for PDF and CDF. Show the
 ``hist_stretching.cpp``
 : program to perform histogram stretching on the input image. 
 
-1) ``int main()``
+### 1) ``int main()``
 : read the input image and convert to grayscale. invoke the cal_PDF and cal_CDF function from hist_func.h
 and get PDF and CDF for the image. call the linear_stretching function and change the intensity ranges of the input image by transfer function.
 Write the text file for PDF, stretched image PDF, and transfer function. Show the original image and stretched image.
 	
-2) void linear_stretching(Mat& input, Mat& stretched, G* trans_func, G x1, G x2, G y1, G y2)
+### 2) void linear_stretching(Mat& input, Mat& stretched, G* trans_func, G x1, G x2, G y1, G y2)
 : function to do linear_stretching
 - parameter
   
@@ -75,12 +75,12 @@ Write the text file for PDF, stretched image PDF, and transfer function. Show th
 ``hist_eq.cpp``
 : program to perform histogram equalization for single channel image
 
-1) ``int main()``
+### 1) ``int main()``
 : read the input image and convert to grayscale. invoke the cal_PDF and cal_CDF function from hist_func.h
 and get PDF and CDF for the image. call the hist_eq function and change the intensity values of the input image to uniform probability by transfer function.
 Write the text file for PDF, equalized image PDF, and transfer function. Show the original image and equalized image.
 	
-2) ``void hist_eq(Mat& input, Mat& equalized, G* trans_func, float *CDF)``
+### 2) ``void hist_eq(Mat& input, Mat& equalized, G* trans_func, float *CDF)``
 : function to do histogram equalization
 - parameter
   
@@ -97,12 +97,12 @@ Write the text file for PDF, equalized image PDF, and transfer function. Show th
 ``hist_eq_RGB.cpp``
 : program to perform histogram equalization for color image
 
-1) ``int main()``
+### 1) ``int main()``
 : read the input image and invoke the cal_PDF_RGB and cal_CDF_RGB function from hist_func.h and get PDF and CDF for the image. 
 call the hist_eq function and change the intensity values of the input image to uniform probability by transfer function on each channel.
 Write the text file for PDF, equalized image PDF, and transfer function. Show the original image and equalized image.
 
-2) ``void hist_eq(Mat& input, Mat& equalized, G* (trans_func)[3], float **CDF)``
+### 2) ``void hist_eq(Mat& input, Mat& equalized, G* (trans_func)[3], float **CDF)``
 : function to do histogram equalization
 - parameter
   
@@ -119,14 +119,14 @@ Write the text file for PDF, equalized image PDF, and transfer function. Show th
 ``hist_eq_YUV.cpp``
 : program to perform histogram equalization for color image
 
-1) ``int main()``
+### 1) ``int main()``
 : read the input image and convert to YUV. split each channel. 
 invoke the cal_PDF_RGB for the image and cal_CDF function for the Y channel from hist_func.h.
 call the hist_eq function and change the intensity values of the input image to uniform probability by transfer function on Y channel only.
 merge three channels and convert equalized Y and UV to the color image (RGB). 
 Write the text file for PDF, equalized image PDF, and transfer function. Show the original image and equalized image.
 
-2) ``void hist_eq(Mat& input, Mat& equalized, G* trans_func, float *CDF)``
+### 2) ``void hist_eq(Mat& input, Mat& equalized, G* trans_func, float *CDF)``
 : function to do histogram equalization
 - parameter
   
@@ -144,7 +144,7 @@ Write the text file for PDF, equalized image PDF, and transfer function. Show th
 ``hist_matching_gray.cpp``
 : program to perform histogram matching for grayscale image
 
-1) ``int main()``
+### 1) ``int main()``
 : read the input image and reference image and convert them to grayscale. 
 invoke the cal_PDF for the input image, and cal_CDF function for the input and reference image each.
 set the transfer function T(r) and G(r). (L-1)* each CDF
@@ -157,7 +157,7 @@ Write the text file for PDF, matched image PDF, and transfer function. Show the 
 ``hist_matching_color.cpp``
 : program to perform histogram matching for color image
 
-1) ``int main()``
+### 1) ``int main()``
 : read the input image and reference image and convert them to YUV. split each channel. 
 invoke the cal_PDF_RGB  for the input image, and cal_CDF function for the Y channel of input and reference image each.
 set the transfer function T(r) and G(r). (L-1)* each CDF
